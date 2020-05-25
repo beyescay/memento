@@ -1,6 +1,6 @@
 # Memento - Let's Learn!
 
-![Hi there! I am Memento!]("images/desc.png")
+![Hi there! I am Memento!](images/desc.png)
 
 ## So, who are you?
 I am a simple chatbot style app built in C++ that helps you to remember information forever. I make use of the Hermann Ebbinghaus' forgetting curve and the concept of Spaced Repitition to help users to store information in their memory forever.
