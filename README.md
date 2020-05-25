@@ -3,9 +3,9 @@
 ![Hi there! I am Memento!](images/desc.png)
 
 ## So, who are you?
-I am a simple chatbot style app built in C++ that helps you to remember information forever. I make use of the Hermann Ebbinghaus' forgetting curve and the concept of Spaced Repitition to help users to store information in their memory forever.
+I am a simple chatbot style app built in C++ that helps you to remember information forever. I make use of the "Hermann Ebbinghaus'" forgetting curve, and the concept of "Spaced Repitition" to help users to retain information in their memory forever.
 
-## Sorry, I forgot your name. Can you tell me yours again?
+## Sorry, I forgot your name! Can you tell me yours again?
 
 You are not the only one. I get that a lot. Now you know why I exist ;) 
 
@@ -13,11 +13,17 @@ If it helps, here is the origin of my name.
 
 ![Origin!](/images/meaning.png)
 
-## Okay, but tell me how I can remember the entire lyrics of Hamilton, but I can't remember how many pounds equal 1 Kg?
+## Okay, but tell me how I can remember the entire lyrics of Hamilton, but I can't remember how many Pounds equal 1 Kg?
 
-Human memory is very powerful, complex and super fascinating. But it is very fragile. Humans forget information easily. Though, they don't forget information that gets stored in their long-term memory such as birthdays, their first language etc., they easily forget information stored in their short-term memory. For example, try recalling the name of the forgetting curve that I mentioned in the first paragraph ;) Most likely, you could not. This is because that information did not make it into your long-term memory from your short term memory. And, there are so many theories that explain why humans forget information from their short-term memory. 
+Human memory is very powerful, complex and super fascinating. But it is very fragile. Humans forget information easily. Though, they don't forget information that gets stored in their long-term memory such as birthdays, their first language etc., they easily forget information stored in their short-term memory. For example, try recalling the name of the forgetting curve that I mentioned in the first paragraph ;) Most likely, you could not! This is because that information did not make it into your long-term memory from your short term memory. And, there are so many theories that explain why humans forget information from their short-term memory. 
 
-Mainly, it is due to 4 reasons. "Retrieval Failure" - explains that humans don't forget, but instead they lose the ability to retrive the information, and thus giving them the "sense" of forgetting. With the right cues, this information can be successfully retrived from the memory (Remember Mind Palace from Sherlock Holmes ?). "Interference" - posits that the information humans are trying to remember gets jumbled up with other information in the memory, and thus losing the ability to recall. "Ineffective encoding" - suggests that careful attention was not paid to an information, that the information never even made to the short term memory in the first place. If you forgot the name of the forgetting curve in the previous paragraph, it is probably due to this. The most common reason why people forget information is due to something called "Memory Fading" or "Decay theory".
+Mainly, it is due to 4 reasons. 
+
+"Retrieval Failure" - explains that humans don't forget, but instead they lose the ability to retrieve the information, and thus giving them the "sense" of forgetting. With the right cues, this information can be successfully re·trieved from the memory (Remember Mind Palace from Sherlock Holmes ?) 
+
+"Interference" - posits that the information humans are trying to remember gets jumbled up with other information in the memory, and thus losing the ability to recall. 
+
+"Ineffective encoding" - suggests that careful attention was not paid to an information, that the information never even made to the short term memory in the first place. If you forgot the name of the forgetting curve in the previous paragraph, it is probably due to this. The most common reason why people forget information is due to something called "Memory Fading" or "Decay theory".
 
 "Decay theory" expounds that every new information that a person learns decays over time. And, this is applicable only for short-term memory (Information in the long-term memory never decays in normal circumstances). The curve that shows this decay of memory over time is called the "Forgetting curve", developed by Hermann Ebbinghaus in 1885. (Can you believe that ? In 1885!! So, since 1885 humans were trying to solve one of the most popular dilemmas that humans face while shopping in a grocery store - "Ah, what's the fourth item in that shopping list note on my fridge ???")
 
