@@ -11,7 +11,7 @@ You are not the only one. I get that a lot. Now you know why I exist ;)
 
 If it helps, here is the origin of my name.
 
-("./images/meaning.png")
+![Origin!](/images/meaning.png)
 
 ## Okay, but tell me how I can remember the entire lyrics of Hamilton, but I can't remember how many pounds equal 1 Kg?
 
@@ -41,6 +41,8 @@ Currently, I can help you remember the following.
 1. Files (For e.g., notes stored in a text file).
 2. Web links (For e.g. a blog link on French Revolution).
 3. Generic text (Whatever you type in the text box. For e.g., Hola - Hello)
-            
+
+![How I work!](images/desc2.png)
+
 ## But, you are just too simple!
 
