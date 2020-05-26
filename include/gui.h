@@ -6,18 +6,14 @@
 #include "wx/wx.h"
 #include <unordered_map>
 
+// Forward declaration
 class Memento;
 
 class MementoApp : public wxApp{
+
   public:
   virtual bool OnInit();
-  //static void init();
-  //static void pushNotification(Notification* const notification);
-  //static void displayNotification();
   
-  private:
-  //static MessageQueue<Notification> _message_q;
-  //std::mutex _mtx;
 };
 
 class MementoDialogItem : public wxPanel {
@@ -69,7 +65,6 @@ class MementoFrame : public wxFrame {
   void OnEnter(wxCommandEvent &WXUNUSEDevent);
 
 };
-
 
 
 #endif

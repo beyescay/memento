@@ -2,16 +2,12 @@
 #ifndef KNOWLEDGE_H
 #define KNOWLEDGE_H
 
-#include "forgetting_curve.h"
-#include <condition_variable>
 #include <string>
 #include <vector>
+#include <memory>
 
-enum KnowledgeType {
-  File,
-  Link,
-  Text
-};
+#include "forgetting_curve.h"
+
 
 class BaseKnowledge {
   

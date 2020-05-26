@@ -6,7 +6,7 @@ I am a simple chatbot style app written in C++ that helps you to remember inform
 
 ### Sorry, I forgot your name! Can you tell me yours again?
 
-You are not the only one. I get that a lot. Now you know why I exist ;) 
+You are not the only one, I get that a lot! Now you know why I exist ;) 
 
 If it helps, here is the origin of my name.
 
@@ -18,13 +18,13 @@ Human memory is very powerful, complex and super fascinating. But it is very fra
 
 Mainly, it is due to 4 reasons. 
 
-"Retrieval Failure" - explains that humans don't forget, but instead they lose the ability to retrieve the information, and thus giving them the "sense" of forgetting. With the right cues, this information can be successfully re·trieved from the memory (Remember Mind Palace from Sherlock Holmes ?) 
+"Retrieval Failure" - explains that humans don't forget, but instead they lose the ability to retrieve the information, and thus giving them the "sense" of forgetting. With the right cues, this information can be successfully retrieved from the memory (Remember Mind Palace from Sherlock Holmes ?) 
 
 "Interference" - posits that the information humans are trying to remember gets jumbled up with other information in the memory, and thus losing the ability to recall. 
 
 "Ineffective encoding" - suggests that careful attention was not paid to an information, that the information never even made to the short term memory in the first place. If you forgot the name of the forgetting curve in the first paragraph, it is probably due to this. The most common reason why people forget information is due to something called "Memory Fading" or "Decay theory".
 
-"Decay theory" expounds that every new information that a person learns decays over time. And, this is applicable only for short-term memory (Information in the long-term memory never decays in normal circumstances). The curve that shows this decay of memory over time is called the "Forgetting curve", developed by Hermann Ebbinghaus in 1885. (Can you believe that ? In 1885!! So, since 1885 humans were trying to solve one of the most popular dilemmas that humans face, while shopping in a grocery store - "Ah, what's the fourth item in that shopping list note on my fridge ???")
+"Decay theory" expounds that every new information that a person learns decays over time. And, this is applicable only for short-term memory (Information in the long-term memory never decays in normal circumstances). The curve that shows this decay of memory over time is called the "Forgetting curve", developed by Hermann Ebbinghaus in 1885. (Can you believe that ? In 1885!! So, since 1885 humans were trying to solve one of the most popular dilemmas that humans face while shopping in a grocery store - "Ah, what's the fourth item in that shopping list note on my fridge ???")
 
 Though the memory decays over time, with repeated recalls (revisions) of a memory, the decay rate can be changed. This implies that with timely scheduled repititions (revisions), we can move an information to the long-term memory, and thus remembering the information forever (Yay!!). This concept of timely scheduled repititions is called "Spaced Repitition". 
 
@@ -34,9 +34,9 @@ And btw, 1 Kg = 2.20462 pounds :)
 
 ### But, why Memento? Haven't you heard of Sticky notes?
 
-You got me! There are atleast dozen other sophisticated and cool apps like SuperMemo, Brainscape, Anki etc., that use much more complex machine learning algorithms along with Spaced Repititions to achieve the same goal. But, they all are very structured and very focused learning apps. Predominantly, they all use flash card style information to learn a new concept, for e.g., spanish vocab. But, none of them can be used for information that can't be organized into flash cards. And, this was my creator's main motivation. I came out of his personal need to remember "non flash-card" style information. (Also, he has a very bad memory! Shhhh!!)
+You got me! There are atleast dozen other sophisticated and cool apps like SuperMemo, Brainscape, Anki etc., that use much more complex machine learning algorithms along with Spaced Repititions to achieve the same goal. But, they all are very structured and very focused learning apps. Predominantly, they all use flash card style information to learn a new concept, for e.g., spanish vocab. But none of them can be used for information that can't be organized into flash cards. And, this was my writer's main motivation. I came out of his personal need to remember "non flash-card" style information. (Also, he has a very bad memory! Shhhh!!)
 
-Suppose say, you watched a video on youtube that explains how humans always have room for dessert! Next day, you went to a Thanksgiving dinner, and voila, you got a perfect opportunity to explain how you can still eat that Pumpkin Pie after that Turkey! But unfortunately, you forgot the explanation! You could have avoided this if you had remembered to watch that video again before you went to the dinner. But, I see the problem here! You forgot to remember to remember to rewatch to remember the video. (Oof, Inception much ?!) But, don't worry! That's where I come into the picture. And, that's why I am better than your Sticky notes. (Most importantly, I don't fall off from your fridge door directly into oblivion!)
+Suppose say, you watched a video on youtube that explains how humans always have room for dessert. Next day, you went to a Thanksgiving dinner, and voila, you got a perfect opportunity to explain how you can still eat that Pumpkin Pie after that Turkey! But unfortunately, you forgot the explanation. You could have avoided this if you had remembered to watch that video again before you went to the dinner. But, I see the problem here! You forgot to remember to remember to rewatch to remember the video. (Oof, Inception much ?) But, don't worry! That's where I come into the picture. And, that's why I am better than your Sticky notes. (Most importantly, I don't fall off from your fridge door directly into oblivion!)
 
 ### Okay, I am convinced! Now, How do I remember why we always have room for dessert?
 

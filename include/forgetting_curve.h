@@ -2,54 +2,39 @@
 #define FORGETTING_CURVE_H
 
 #include <chrono>
-#include <deque>
-#include <condition_variable>
 #include <mutex>
 #include <thread>
 #include <vector>
 
 #include "message_queue.h"
 
-using namespace std::chrono_literals;
-
-/*Leitner system based Forgetting curve
-enum RepititionNum {
-  Start = 0,
-  One,
-  Two,
-  Three,
-  Four,
-  End
-};
-*/
 
 class ForgettingCurve {
 
   public:
-  //Constructor
+  // Constructor
   ForgettingCurve();
-
-  ~ForgettingCurve();
- 
-  void start();
-
-  void notify();
   
+  // Control Functions
+  void start();
+  void notify();
   void waitForNotification();
 
-  int getCurrentRep();
+  // Getters
+  int getCurrentRep() {return _rep_num;}
+  static int getMaxReps() {return _k_max_reps;}
 
-  static int getMaxReps(); 
-
-  float getRetention();
-
+  float getRetention() {return _retention;}
   float getMinRetention(int rep_num);
 
-  void updateRetention();
+  int getTotalElapsedTime() {return _total_time_elapsed;}
 
+  // Update functions
+  void updateRetention();
   void updateStability();
 
-  int getTotalElapsedTime();
+  //Destructor
+  ~ForgettingCurve();
 
   private:
   MessageQueue<int> _message_q;
@@ -61,10 +46,8 @@ class ForgettingCurve {
   int _total_time_elapsed = 0;
   float _stability = 0.87;
   float _retention;
-  
   int _rep_num = 0;
   static constexpr int _k_max_reps = 4;
-
 
 }; 
 

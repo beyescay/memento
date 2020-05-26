@@ -1,13 +1,12 @@
 #include "memento.h"
+
 #include <algorithm>
 #include <memory>
 #include <thread>
 
-Memento::Memento(MementoDialogWindow* dialog_window) : _dialog_window(dialog_window) {
+Memento::Memento(MementoDialogWindow* dialog_window) : _dialog_window(dialog_window) { }
 
-}
-
-std::unordered_map<std::string, std::string> Memento::_responses{ 
+std::unordered_map<std::string, std::string> Memento::_responses { 
   
   {"start", "Hi, I am Memento! I will help you remember things you learn. As of now, I "
             "can help you remember the following.\n"
@@ -37,17 +36,19 @@ std::unordered_map<std::string, std::string> Memento::_responses{
   {"text", "Wonderful! I will remind you when it's time to take a look at that Post-it notes again. And don't worry, these post-it notes won't fall off from the fridge door."},
 };
 
-void Memento::getResponse(std::string user_txt){
+void Memento::getResponse(std::string user_txt) {
 
   std::string status = user_txt;
 
   if(_last_response == "1") {
-    status = "files";
+    status = "files"; 
   }
-  else if (_last_response == "2"){
+
+  else if (_last_response == "2") {
     status = "links";
   }
-  else if (_last_response == "3"){
+
+  else if (_last_response == "3") {
     status = "text";
   }  
   
@@ -56,48 +57,53 @@ void Memento::getResponse(std::string user_txt){
   _dialog_window->PrintMementoResponse(_responses[status]);
   
   if (status == "files" || status == "links" || status == "text"){
+
     _dialog_window->PrintMementoResponse(_responses["start_over"]);
     
     if (status == "files"){
+
       auto know_f = std::make_shared<FileKnowledge>(user_txt);
-      //std::cout << "Starting memento thread for this file" << std::endl;
       _threads.emplace_back(std::thread(&Memento::start, this, know_f));
+    
     }
+
     else if (status == "links"){
+
       auto know_l = std::make_shared<LinkKnowledge>(user_txt);
-      //std::cout << "Starting memento thread for this file" << std::endl;
       _threads.emplace_back(std::thread(&Memento::start, this, know_l));
+    
     }
+
     else if (status == "text"){
+
       auto know_t = std::make_shared<TextKnowledge>(user_txt);
-      //std::cout << "Starting memento thread for this file" << std::endl;
       _threads.emplace_back(std::thread(&Memento::start, this, know_t));
+    
     }
 
   }
 
 }
-void Memento::start(std::shared_ptr<BaseKnowledge> know){
+void Memento::start(std::shared_ptr<BaseKnowledge> know) {
   
   auto fc_ptr = know->getForgettingCurvePtr();
-  //std::cout << "Starting fc " << std::endl;
+  
   fc_ptr->start();
-  //std::cout << "Entering while loop" << std::endl;
-  while(fc_ptr->getCurrentRep() < ForgettingCurve::getMaxReps()){
-    //std::cout << "Waiting for notification in memetno" << std::endl;
-    fc_ptr->waitForNotification();
-    auto response = know->getNotification();
-    _dialog_window->PrintMementoResponse(response, true);
-  }
-  //std::cout << "Exiting while loop" << std::endl;
 
+  while(fc_ptr->getCurrentRep() < ForgettingCurve::getMaxReps()) {
+  
+    fc_ptr->waitForNotification();
+  
+    auto response = know->getNotification();
+  
+    _dialog_window->PrintMementoResponse(response, true);
+  
+  }
+  
 }
 
 Memento::~Memento(){
   
-  std::for_each(_threads.begin(), _threads.end(), [](std::thread& t){ 
-    t.join();
-    }
-  );
+  std::for_each(_threads.begin(), _threads.end(), [](std::thread& t){ t.join();});
 
 }

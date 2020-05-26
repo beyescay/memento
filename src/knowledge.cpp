@@ -1,4 +1,5 @@
 #include "knowledge.h"
+
 #include <sstream>
 
 BaseKnowledge::BaseKnowledge(std::string info) : _info(info) {
@@ -7,11 +8,9 @@ BaseKnowledge::BaseKnowledge(std::string info) : _info(info) {
   
 }
 
-FileKnowledge::FileKnowledge(std::string info) : BaseKnowledge(info) {
+FileKnowledge::FileKnowledge(std::string info) : BaseKnowledge(info) { }
 
-}
-
-std::string FileKnowledge::getNotification(){
+std::string FileKnowledge::getNotification() {
 
   auto ret = _fcPtr->getRetention()*100;
   std::stringstream sstrm;
@@ -27,13 +26,12 @@ std::string FileKnowledge::getNotification(){
                     "This will be your revision number: " + std::to_string(rep_num);
 
   return res;
-}
-
-LinkKnowledge::LinkKnowledge(std::string info) : BaseKnowledge(info) {
 
 }
 
-std::string LinkKnowledge::getNotification(){
+LinkKnowledge::LinkKnowledge(std::string info) : BaseKnowledge(info) { }
+
+std::string LinkKnowledge::getNotification() {
 
   auto ret = _fcPtr->getRetention()*100;
   std::stringstream sstrm;
@@ -49,13 +47,12 @@ std::string LinkKnowledge::getNotification(){
                     "This will be your revision number: " + std::to_string(rep_num);
 
   return res;
-}
-
-TextKnowledge::TextKnowledge(std::string info) : BaseKnowledge(info) {
 
 }
 
-std::string TextKnowledge::getNotification(){
+TextKnowledge::TextKnowledge(std::string info) : BaseKnowledge(info) { }
+
+std::string TextKnowledge::getNotification() {
 
   auto ret = _fcPtr->getRetention()*100;
   std::stringstream sstrm;
@@ -71,4 +68,5 @@ std::string TextKnowledge::getNotification(){
                     "This will be your revision number: " + std::to_string(rep_num);
                     
   return res;
+
 }
