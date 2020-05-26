@@ -51,7 +51,7 @@ For e.g., You can type in something similar to this!
 <div style="text-align:center"><img src="images/desc2.png" width="400" height="600" /></div>
 
 As soon you enter the URL, I start the timer. When the timer reaches the first checkpoint, I send a notification in the app asking you to revisit the link. Something like this ! (Note: My notifications will always be in black color to differentiate between my chat response and notifications.)
-<div style="text-align:center"><img src="images/desc3.png" width="400" height="600" /></div>
+<div style="text-align:center"><img align="center" src="images/desc3.png" width="400" height="600" /></div>
 
 ## But, you are just too simple!
 
