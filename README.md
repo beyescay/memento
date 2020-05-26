@@ -49,6 +49,7 @@ Currently, I can help you remember the following.
 3. Generic text (Whatever you type in the text box. For e.g., Hola - Hello)
 
 ![How I work!](images/desc2.png)
+![How I work!](images/desc3.png)
 
 ## But, you are just too simple!
 
