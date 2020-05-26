@@ -3,10 +3,8 @@
 #include <iostream>
 #include <algorithm>
 
-
 using namespace std::chrono;
 
-//Constructor
 ForgettingCurve::ForgettingCurve() { }
 
 void ForgettingCurve::start(){
