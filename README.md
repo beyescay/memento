@@ -2,7 +2,7 @@
 <p align="center"><img src="images/desc.png" width="400" height="600" /></p>
 
 ## So, who are you?
-I am a simple chatbot style app built in C++ that helps you to remember information forever. I make use of the "Hermann Ebbinghaus'" forgetting curve, and the concept of "Spaced Repitition" to help users to retain information in their memory forever.
+I am a simple chatbot style app written in C++ that helps you to remember information forever. I make use of the "Hermann Ebbinghaus'" forgetting curve, and the concept of "Spaced Repitition" to help users to retain information in their memory forever.
 
 ## Sorry, I forgot your name! Can you tell me yours again?
 
