@@ -4,14 +4,14 @@
 #include <wx/image.h>
 
 constexpr int height = 600;
-constexpr int width = 800;
-constexpr int wrap = width/1.75;
+constexpr int width = 400;
+constexpr int wrap = width/1.25;
 constexpr int box_width = wrap+10;
 
 wxIMPLEMENT_APP(MementoApp);
 
 std::string images_folder = "../images/";
-std::string logo = "logo9.png";
+std::string logo = "logo6.png";
 std::string user = "user3.png";
 std::string bot = "bot4.png";
 
@@ -103,9 +103,9 @@ MementoDialogWindow::MementoDialogWindow(wxWindow* parent, wxWindowID id) : wxSc
   
 }
 
-void MementoDialogWindow::AddDialogItem(wxString text, bool from_user) {
+void MementoDialogWindow::AddDialogItem(wxString text, bool from_user, bool is_notification) {
   
-  MementoDialogItem* item = new MementoDialogItem(this, text, from_user);
+  MementoDialogItem* item = new MementoDialogItem(this, text, from_user, is_notification);
   _dialog_window_sizer->Add(item, 0, wxALL | (from_user == true ? wxALIGN_RIGHT : wxALIGN_LEFT), 8);
   _dialog_window_sizer->Layout();
 
@@ -120,10 +120,10 @@ void MementoDialogWindow::AddDialogItem(wxString text, bool from_user) {
 
 }
 
-void MementoDialogWindow::PrintMementoResponse(std::string response){
+void MementoDialogWindow::PrintMementoResponse(std::string response, bool is_notification){
 
   wxString txt(response.c_str());
-  AddDialogItem(txt, false);
+  AddDialogItem(txt, false, is_notification);
 
 }
 
@@ -162,17 +162,17 @@ void MementoDialogWindow::render(wxDC& dc) {
 // Memento Dialog Window - END
 
 // Memento Dialog Item - START
-MementoDialogItem::MementoDialogItem(wxPanel* parent, wxString text, bool from_user)
+MementoDialogItem::MementoDialogItem(wxPanel* parent, wxString text, bool from_user, bool is_notification)
  : wxPanel(parent, -1, wxPoint(-1, -1), wxSize(-1, -1), wxBORDER_NONE) {
 
-   wxImage img;
-   img.LoadFile(from_user ? images_folder + user : images_folder + bot);
-   wxSize sz = this->GetSize();
-   wxImage img_rescaled = img.Rescale(sz.GetWidth(), sz.GetHeight(), wxIMAGE_QUALITY_NEAREST);
-
+   //wxImage img;
+   //img.LoadFile(from_user ? images_folder + user : images_folder + bot);
+   //wxSize sz = this->GetSize();
+   //wxImage img_rescaled = img.Rescale(sz.GetWidth(), sz.GetHeight(), wxIMAGE_QUALITY_NEAREST);
    //auto sbm = new wxStaticBitmap(this, wxID_ANY, wxBitmap(img_rescaled, wxBITMAP_TYPE_PNG), wxPoint(100, 30), wxSize(100, 100));
+   
    auto txt = new wxStaticText(this, wxID_ANY, text, wxPoint(-1, -1), wxSize(box_width, -1), wxALIGN_LEFT | wxBORDER_NONE);
-   txt->SetForegroundColour(from_user == true ? wxColor(*wxBLACK) : wxColor(*wxBLACK));
+   txt->SetForegroundColour(is_notification == true ? wxColor(*wxWHITE) : wxColor(*wxBLACK));
    
    wxBoxSizer* hor_box_sizer = new wxBoxSizer(wxHORIZONTAL);
    
@@ -189,8 +189,13 @@ MementoDialogItem::MementoDialogItem(wxPanel* parent, wxString text, bool from_u
 
    txt->Wrap(wrap);
 
-   this->SetBackgroundColour((from_user == true ? wxColor(255, 1, 217) : wxT("YELLOW")));
- }
+   if (is_notification) {
+      this->SetBackgroundColour(wxColor(0, 0, 0));
+   } 
+   else{ 
+      this->SetBackgroundColour((from_user == true ? wxColor(255, 1, 217) : wxT("YELLOW")));
+   }
+  }
  // Memento Dialog Item - START
 
 

@@ -1,6 +1,8 @@
 
+#ifndef KNOWLEDGE_H
+#define KNOWLEDGE_H
+
 #include "forgetting_curve.h"
-#include "notification.h"
 #include <condition_variable>
 #include <string>
 #include <vector>
@@ -11,18 +13,46 @@ enum KnowledgeType {
   Text
 };
 
-template<typename T>
-class Knowledge {
+class BaseKnowledge {
   
   public:
+  BaseKnowledge(std::string info);
   
+  ForgettingCurve* getForgettingCurvePtr(){ return _fcPtr.get(); }
+
   void setSubject(std::string subject) {_subject = subject;}
   std::string getSubject() const {return _subject;}
   
-  std::string getNotification();
+  virtual std::string getNotification() = 0;
   
-  private:
-  std::string _subject;
+  protected:
   std::shared_ptr<ForgettingCurve> _fcPtr;
+  std::string _info;
+  std::string _subject;
+  
 };
 
+class FileKnowledge : public BaseKnowledge {
+
+  public:
+  FileKnowledge(std::string info);
+  std::string getNotification() override;
+
+};
+
+class LinkKnowledge : public BaseKnowledge {
+
+  public:
+  LinkKnowledge(std::string info);
+  std::string getNotification() override;
+
+};
+
+class TextKnowledge : public BaseKnowledge {
+
+  public:
+  TextKnowledge(std::string info);
+  std::string getNotification() override;
+
+};
+#endif

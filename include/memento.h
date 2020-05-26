@@ -22,7 +22,7 @@ class Memento {
   void getResponse(std::string user_txt);
 
   private:
-  void start(Knowledge* know);
+  void start(std::shared_ptr<BaseKnowledge> know);
   MementoDialogWindow* _dialog_window;
   std::vector<std::thread> _threads;
   static std::unordered_map<std::string, std::string> _responses;

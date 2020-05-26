@@ -10,7 +10,7 @@
 template<typename T>
 class MessageQueue {
   public:
-  void send(T& msg);
+  void send(T msg);
   T receive();
 
   private:
@@ -21,7 +21,7 @@ class MessageQueue {
 };
 
 template<typename T>
-void MessageQueue<T>::send(T& msg) {
+void MessageQueue<T>::send(T msg) {
   
   std::lock_guard<std::mutex> lck(_mtx);
   _queue.push_back(msg);

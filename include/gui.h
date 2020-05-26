@@ -1,7 +1,6 @@
 #ifndef GUI_H
 #define GUI_H
 
-#include "notification.h"
 #include "message_queue.h"
 #include "memento.h"
 #include "wx/wx.h"
@@ -24,7 +23,7 @@ class MementoApp : public wxApp{
 class MementoDialogItem : public wxPanel {
   
   public:
-  MementoDialogItem(wxPanel* parent, wxString text, bool from_user);
+  MementoDialogItem(wxPanel* parent, wxString text, bool from_user, bool is_notification=false);
 
 };
 class MementoDialogWindow : public wxScrolledWindow {
@@ -32,8 +31,8 @@ class MementoDialogWindow : public wxScrolledWindow {
   public:
   MementoDialogWindow(wxWindow* parent, wxWindowID id);
 
-  void AddDialogItem(wxString text, bool from_user=true);
-  void PrintMementoResponse(std::string response);
+  void AddDialogItem(wxString text, bool from_user=true, bool is_notification=false);
+  void PrintMementoResponse(std::string response, bool is_notification=false);
   Memento* GetMementoHandle();
 
   void paintEvent(wxPaintEvent& evt);

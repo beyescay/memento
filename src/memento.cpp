@@ -1,4 +1,7 @@
 #include "memento.h"
+#include <algorithm>
+#include <memory>
+#include <thread>
 
 Memento::Memento(MementoDialogWindow* dialog_window) : _dialog_window(dialog_window) {
 
@@ -36,30 +39,65 @@ std::unordered_map<std::string, std::string> Memento::_responses{
 
 void Memento::getResponse(std::string user_txt){
 
+  std::string status = user_txt;
+
   if(_last_response == "1") {
-    user_txt = "files";
+    status = "files";
   }
   else if (_last_response == "2"){
-    user_txt = "links";
+    status = "links";
   }
   else if (_last_response == "3"){
-    user_txt = "text";
+    status = "text";
   }  
   
   _last_response = user_txt;
   
-  _dialog_window->PrintMementoResponse(_responses[user_txt]);
+  _dialog_window->PrintMementoResponse(_responses[status]);
   
-  if (user_txt == "files" || user_txt == "links" || user_txt == "text"){
+  if (status == "files" || status == "links" || status == "text"){
     _dialog_window->PrintMementoResponse(_responses["start_over"]);
+    
+    if (status == "files"){
+      auto know_f = std::make_shared<FileKnowledge>(user_txt);
+      //std::cout << "Starting memento thread for this file" << std::endl;
+      _threads.emplace_back(std::thread(&Memento::start, this, know_f));
+    }
+    else if (status == "links"){
+      auto know_l = std::make_shared<LinkKnowledge>(user_txt);
+      //std::cout << "Starting memento thread for this file" << std::endl;
+      _threads.emplace_back(std::thread(&Memento::start, this, know_l));
+    }
+    else if (status == "text"){
+      auto know_t = std::make_shared<TextKnowledge>(user_txt);
+      //std::cout << "Starting memento thread for this file" << std::endl;
+      _threads.emplace_back(std::thread(&Memento::start, this, know_t));
+    }
 
   }
 
 }
-void Memento::start(Knowledge* know){
+void Memento::start(std::shared_ptr<BaseKnowledge> know){
+  
+  auto fc_ptr = know->getForgettingCurvePtr();
+  //std::cout << "Starting fc " << std::endl;
+  fc_ptr->start();
+  //std::cout << "Entering while loop" << std::endl;
+  while(fc_ptr->getCurrentRep() < ForgettingCurve::getMaxReps()){
+    //std::cout << "Waiting for notification in memetno" << std::endl;
+    fc_ptr->waitForNotification();
+    auto response = know->getNotification();
+    _dialog_window->PrintMementoResponse(response, true);
+  }
+  //std::cout << "Exiting while loop" << std::endl;
 
 }
 
 Memento::~Memento(){
-  //_t.join();
+  
+  std::for_each(_threads.begin(), _threads.end(), [](std::thread& t){ 
+    t.join();
+    }
+  );
+
 }
