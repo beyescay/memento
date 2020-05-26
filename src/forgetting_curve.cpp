@@ -31,11 +31,8 @@ void ForgettingCurve::notify(){
     if (_retention < getMinRetention(_rep_num)){
       
       _rep_num++;
-      
       _message_q.send(_rep_num);
-
       updateStability();
-      
       start_time = curr_time;
 
     }
