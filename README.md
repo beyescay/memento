@@ -1,5 +1,5 @@
 # Memento - Let's Learn!
-<div style="text-align:center"><img src="images/desc.png" width="200" height="300" /></div>
+<div style="text-align:center"><img src="images/desc.png" width="400" height="600" /></div>
 
 ## So, who are you?
 I am a simple chatbot style app built in C++ that helps you to remember information forever. I make use of the "Hermann Ebbinghaus'" forgetting curve, and the concept of "Spaced Repitition" to help users to retain information in their memory forever.
@@ -48,10 +48,10 @@ Currently, I can help you remember the following.
 3. Generic text (Whatever you type in the text box. For e.g., Hola - Hello)
 
 For e.g., You can type in something similar to this!
-<div style="text-align:center"><img src="images/desc2.png" width="200" height="300" /></div>
+<div style="text-align:center"><img src="images/desc2.png" width="400" height="600" /></div>
 
 As soon you enter the URL, I start the timer. When the timer reaches the first checkpoint, I send a notification in the app asking you to revisit the link. Something like this ! (Note: My notifications will always be in black color to differentiate between my chat response and notifications.)
-<div style="text-align:center"><img src="images/desc3.png" width="200" height="300" /></div>
+<div style="text-align:center"><img src="images/desc3.png" width="400" height="600" /></div>
 
 ## But, you are just too simple!
 
