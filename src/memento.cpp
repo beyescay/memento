@@ -87,15 +87,12 @@ void Memento::getResponse(std::string user_txt) {
 void Memento::start(std::shared_ptr<BaseKnowledge> know) {
   
   auto fc_ptr = know->getForgettingCurvePtr();
-  
   fc_ptr->start();
 
   while(fc_ptr->getCurrentRep() < ForgettingCurve::getMaxReps()) {
   
     fc_ptr->waitForNotification();
-  
     auto response = know->getNotification();
-  
     _dialog_window->PrintMementoResponse(response, true);
   
   }
