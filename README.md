@@ -75,7 +75,7 @@ And, similarly for the subsequent checkpoints.
   <img src="images/desc4.png" width="400" height="600"/>
 </p>
 
-My notifications will always be in black color to help you differentiate between my chat response and notifications.
+My notifications will always be in black color to help you differentiate between my chat response and notifications. Also, in these snapshots the days are simulated as seconds. That's why you see notifications that are within seconds. In reality, this would actually be in days.
 
 And then you can repeat the same steps for other new information that you learn. Happy Learning!
 
