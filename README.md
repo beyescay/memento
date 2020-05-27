@@ -20,9 +20,9 @@ If it helps, here is the origin of my name.
 <p align="center"><img src="images/meaning.png" width="600" height="150" /></p>
 
 
-## Okay, but tell me how I can remember the entire lyrics of Hamilton, but I can't remember how many Pounds equal a Kg?
+## Okay, but tell me how I can remember the entire lyrics of Hamilton, but I can't remember how many Pounds equal a Kilogram?
 
-Human memory is very powerful, complex and super fascinating. But it is very fragile. Humans forget information easily. Though, they don't forget information that gets stored in their long-term memory such as birthdays, their first language etc., they easily forget information stored in their short-term memory. For example, try recalling the name of the forgetting curve that I mentioned in the first paragraph ;) Most likely, you could not! This is because that information did not make it into your long-term memory from your short term memory. And, there are so many theories that explain why humans forget information from their short-term memory. 
+Human memory is very powerful, complex and super fascinating. But it is very fragile. Humans forget information easily. Though, they don't forget information that gets stored in their long-term memory such as birthdays, their first language etc., they easily forget information stored in their short-term memory. For example, try recalling the name of the forgetting curve that I mentioned earlier ;) Most likely, you could not! This is because that information did not make it into your long-term memory from your short term memory. And, there are so many theories that explain why humans forget information from their short-term memory. 
 
 Mainly, it is due to 4 reasons. 
 
