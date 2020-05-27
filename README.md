@@ -119,7 +119,7 @@ Typically, the constant values are `s_inc = 26.31` and `g = 2.96`. If we plug th
 s_new = s * (26.31 * e^(-2.96 * r))
 ```
 
-Also, typically the initial stability value is `s = 0.87`. So we use this to obtain the new stability and use the same equation to update stability.
+Also, typically the initial stability value is `s = 0.87`. So we use this to obtain the new stability and use the same equation to get future stability values after every repitition.
 
 So, when we learn a new information the retention curve would look like,
 ```
