@@ -7,7 +7,7 @@
 
 Hi there, I am Memento! 
 
-I am a simple chatbot style app written in C++ that helps you to remember information forever. I make use of the `Hermann Ebbinghaus` forgetting curve, and the concept of `"Spaced Repitition"` to help users to retain information in their memory forever.
+I am a simple chatbot style app written in C++ that helps you to remember information forever. I make use of the `Hermann Ebbinghaus` forgetting curve and the concept of `"Spaced Repitition"` to help users to retain information in their memory forever.
 
 If you are looking for a much shorter description about me, and also for instructions on how to build and run me, check out this [CAPSTONE README](CAPSTONE_README.md). But if you are looking for some fun read, then read on!
 

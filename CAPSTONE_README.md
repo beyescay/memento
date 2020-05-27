@@ -5,7 +5,7 @@
 
 <p align="center"><img src="images/desc.png" width="400" height="600" /></p>
 
-Memento is a simple chatbot style app that helps users to remember information forever.
+Memento is a simple chatbot style app that helps users to remember information forever. It uses the `Hermann Ebbinghaus` forgetting curve and the concept of `"Spaced Repitition"` to help users to retain information in their memory forever.
 
 When we learn something new it gets stored in our memory. But the memory fades away over time. With repeated repititions (revisions) at particular optimal intervals, we can persist this memory forever. For e.g., if we learn the meaning of a new word on Day 0, then with repeated revisions of the meaning of the same word on Day 1, 3, 8 and 21, we can remember that word forever.
 
@@ -42,7 +42,7 @@ Note: The notifications will always be in black color to help user differentiate
 
 And then the same steps can be repeated for other new information that the user wants to remember.
 
-For a much more detailed information on the math behind the spaced repitition pattern `1-3-8-21`, check out this topic - [why 1-3-8-21?](https://github.com/beyescay/memento/blob/master/README.md#why-1-3-8-21-)
+For a much more detailed information on the math behind the Spaced Repitition pattern `1-3-8-21`, check out this topic - [why 1-3-8-21?](https://github.com/beyescay/memento/blob/master/README.md#why-1-3-8-21-)
 
 ## Package Requirements
 
