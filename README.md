@@ -161,3 +161,5 @@ And without any repititions, guess how long it would take to completely forget t
 ```
 And, that's the power of Spaced Repitition. Not bad right!
 
+Now, it's time to learn. See you in the app! Happy Learning!
+
