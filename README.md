@@ -42,13 +42,13 @@ And btw, 1 Kg = 2.20462 pounds :)
 
 ## But, why Memento? Haven't you heard of Sticky notes?
 
-You got me! 
+I think I am better than sticky notes for many reasons. For starters, I don't fall off from your fridge door directly into oblivion!
 
 In a normal week, humans learn a lot of new information on various days of the week which they would like to remember forever. But, it would be a really herculean task to manually keep track of the revision schedule of all these different new information. And, this is where I can help. I can keep track of the revision schedule of every new information that you learn. And when it is time to revise/revisit, I will send you a notification in the app asking you to revise. This way you don't have to worry about manully keeping track of the revision schedule.
 
 Also, there are atleast dozen other sophisticated and cool apps like SuperMemo, Brainscape, Anki etc., that use much more complex machine learning algorithms along with Spaced Repititions to achieve the same goal. But, they all are very structured and very focused learning apps. Predominantly, they all use flash card style information to learn a new concept, for e.g., spanish vocab. But none of them can be used for information that can't be organized into flash cards. And, this was my writer's main motivation. I came out of his personal need to remember "non flash-card" style information. (Also, he is bad with names too. Shhhh!)
 
-Suppose say, you watched a video on youtube that explains how humans always have room for dessert. Next day, you went to a Thanksgiving dinner, and voila, you got a perfect opportunity to explain how you can still eat that Pumpkin Pie after that Turkey. But unfortunately, you forgot the explanation. You could have avoided this if you had remembered to watch that video again before you went to the dinner. But, I see the problem here! You forgot to remember to remember to rewatch to remember the video. (Oof, Inception much?). But, don't worry! That's where I come into the picture. And, that's why I am better than your Sticky notes. (Also, I don't fall off from your fridge door directly into oblivion!)
+Suppose say, you watched a video on youtube that explains how humans always have room for dessert. Next day, you went to a Thanksgiving dinner, and voila, you got a perfect opportunity to explain how you can still eat that Pumpkin Pie after that Turkey. But unfortunately, you forgot the explanation. You could have avoided this if you had remembered to watch that video again before you went to the dinner. But, I see the problem here! You forgot to remember to remember to rewatch to remember the video. (Oof, Inception much?). But, don't worry! That's where I come into the picture. And, that's why I am better than your Sticky notes. 
 
 ## Okay, I am convinced! Now, How do you work?
 
