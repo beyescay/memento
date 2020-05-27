@@ -15,7 +15,7 @@ When we learn something new it gets stored in our memory. But the memory fades a
 
 ## How it works 
 
-When an user enters the required details about the new information in the app, a timer starts. When the timer reaches the first checkpoint of 24 hrs (Day 1), the app will send a notification asking the user to revisit that information. Similary, it would send notifications for subsequent checkpoints - Day 3, Day 8 and Day 21. After the fourth checkpoint, the timer stops.
+When an user enters the required details about a new information in the app, a timer starts. When the timer reaches the first checkpoint of 24 hrs (Day 1), the app will send a notification asking the user to revisit that information. Similary, it would send notifications for subsequent checkpoints - Day 3, Day 8 and Day 21. After the fourth checkpoint, the timer stops.
 
 Currently, the app can help an user remember the following.
 1. Files (For e.g., notes stored in a text file).
