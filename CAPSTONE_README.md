@@ -40,7 +40,7 @@ And, similarly for the subsequent checkpoints.
 
 Note: The notifications will always be in black color to help user differentiate between chat response and notifications. Also, in these snapshots the days are simulated as seconds. That's why the notifications are within seconds. In reality, this would actually be in days. But currently, it is still set to seconds so that the reviewer could test this app. To change it to days, change the `seconds` to `days` in lines 24 and 25 of `src/forgetting_curve.cpp`
 
-And then the same steps can be for other new information that the user wants to remember.
+And then the same steps can be repeated for other new information that the user wants to remember.
 
 For a much more detailed information on the math behind the spaced repitition pattern `1-3-8-21`, check out this topic - [why 1-3-8-21?](https://github.com/beyescay/memento/blob/master/README.md#why-1-3-8-21-)
 
