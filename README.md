@@ -83,7 +83,7 @@ And then you can repeat the same steps for other new information that you learn.
 
 I am glad you asked! Before we understand that, let's learn some new terms.
 
-* `Retention` - Retention is percentage of an information that one could remember or recall. When you learn something new, you can remember almost 100% of it. So the retention is 100%. But, retention drops down exponentially with time. This is the reason why we can't recall information that we learnt just few hours before.
+* `Retention` - Retention is percentage of an information that one could remember or recall. When you learn something new, you can remember almost 100% of it. So the retention is 100%. But, retention drops down exponentially with time. This is the reason why we can't recall information that we learnt just few hours back.
 
 * `Stability` - Stability refers to stability of a particular memory. If a memory is highly stable, then it would take long time for that memory to disapper and vice versa. Long-term memories have almost infinity stability. When you learn something new for the first time, it has a very low stability. But, when you revise that same information after a particular interval, the stability increases. This is the reason why with repeated repititions you could improve the stability of a memory and thus remembering it forever.
 
