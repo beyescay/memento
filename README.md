@@ -143,7 +143,7 @@ Okay, so far this looks promising. Finally, it looks like we have found a way to
 
 But, that's not the end of the story!
 
-I have to tell a little secret here before we get carried away by the magic of `Spaced Repitition` 
+I have to tell a little secret here before we get carried away by the magic of `Spaced Repitition`. 
 
 Even after these 4 repititions, sadly, the memory is still going to decay. It's not going to last forever. (Did I just burst your bubble?) All we did was, we just slowed down the decay rate of the memory. But with just four repititions, we ended up slowing down the decay rate significantly. To give you an idea of how much of an improvement we have made with this pattern of spaced repitition, here are some numbers.
 
