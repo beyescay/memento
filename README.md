@@ -126,7 +126,7 @@ So, when we learn a new information the initial retention curve would look like 
 r = e^(-t/0.87)
 ```
 
-Now, the tricky part is to use these two equations to come with an optimal `Spaced Repitition` pattern. The goal is to increase the stability of a memory in few repititions as well as in the shortest amount of time possible. We achieve maximum stability increase when the retention is 0% i.e. when the memory almost disappears. But, when we repeat (revise) only when the retention goes to 0%, it is going to take many months to achiever our goal. At the same time, if we repeat when the retention is 100%, we get the least amount of stability increase, and we have to do a lot of repititions to achieve our goal (You don't want to revise a topic every two hours right!). So, we have to arrive at a sweet spot. And the sweet spot that my creator came up with is `"1-3-8-21"`.
+Now, the tricky part is to use these two equations to come with an optimal `Spaced Repitition` pattern. The goal is to increase the stability of a memory in few repititions and as well as in the shortest time possible. We achieve maximum stability increase when the retention is 0% i.e. when the memory almost disappears. But, when we repeat (revise) only when the retention goes to 0%, it is going to take many months to achiever our goal. At the same time, if we repeat when the retention is 100%, we get the least amount of stability increase, and we have to do a lot of repititions to achieve our goal (You don't want to revise a topic every two hours right!). So, we have to arrive at a sweet spot. And the sweet spot that my creator came up with is `"1-3-8-21"`.
 
 So with this pattern, these are the values we get for stability and retention.
 
