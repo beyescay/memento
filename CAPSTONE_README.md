@@ -71,7 +71,7 @@ To start Memento type,
 ./memento
 ```
 
-Follow the prompts on the app to use Memento for tracking revision schedules. For more information on how to run and expected output, check out this topic - [How to use Memento](https://github.com/beyescay/memento#okay-i-am-convinced-now-how-do-i-remember-why-we-always-have-room-for-dessert)
+Follow the prompts on the app to use Memento for tracking revision schedules.
 
 ## Descriptions of various classes
 
