@@ -11,9 +11,7 @@ constexpr int box_width = wrap+10;
 wxIMPLEMENT_APP(MementoApp);
 
 std::string images_folder = "../images/";
-std::string logo = "logo6.png";
-std::string user = "user3.png";
-std::string bot = "bot4.png";
+std::string logo = "logo.png";
 
 bool MementoApp::OnInit(){
   MementoFrame* frame =  new MementoFrame(wxT("Memento"));

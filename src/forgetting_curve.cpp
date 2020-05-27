@@ -21,8 +21,8 @@ void ForgettingCurve::notify(){
   while(_rep_num < _k_max_reps){
 
     auto curr_time = system_clock::now();
-    _interval_time_elapsed = duration_cast<hours>(curr_time-start_time).count();
-    _total_time_elapsed = duration_cast<hours>(curr_time-init_time).count();
+    _interval_time_elapsed = duration_cast<seconds>(curr_time-start_time).count();
+    _total_time_elapsed = duration_cast<seconds>(curr_time-init_time).count();
     
     updateRetention();
   
@@ -62,12 +62,15 @@ float ForgettingCurve::getMinRetention(int rep_num){
 
 void ForgettingCurve::updateRetention(){
 
+  // Retention is an exponential curve that depends on time since last repitition and memory stability.
   _retention = exp(-_interval_time_elapsed/_stability);
 
 }
 
 void ForgettingCurve::updateStability() {
   
+  // Stability increases after every repitition. It depends on current retention, current stability, 
+  // and constants Max stability increase ratio (26.31) and Gain constant (2.96)
   _stability *= (26.31 * exp(-2.96* _retention));
 
 }
