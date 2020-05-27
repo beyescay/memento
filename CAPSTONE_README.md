@@ -3,6 +3,8 @@
 
 ## About
 
+<p align="center"><img src="images/desc.png" width="400" height="600" /></p>
+
 Memento is a simple chatbot style app that helps users to remember information forever.
 
 When we learn something new it gets stored in our memory. But the memory fades away over time. But with repeated repititions (revisions) at particular optimal intervals we can persist this memory forever. For e.g., if we learn the meaning of a new word on Day 0, then with repeated revisions of the meaning of the same word on Day 1, 3, 8 and 21 we can remember that word forever.
@@ -10,8 +12,6 @@ When we learn something new it gets stored in our memory. But the memory fades a
  In a normal week, we learn a lot of new information on various days of the week which we would want to remember forever. But, it would be a really difficult task to manually keep track of the revision schedule of all these different new information. It is almost impossible. And, this is where Memento helps. When a user learns something new, the user enters a short description about the new information in the app. Then the app keeps track of the revision schedule of that particular information. And, when it is time to revise, it sends a notification on the app asking the user to revise. This way the user does not have to worry about manully keeping track of the revision schedule.
 
  In short, Memento is just an automated revision schedule tracker. For a much more detailed description, please refer to this [README](README.md)
-
-<p align="center"><img src="images/desc.png" width="200" height="300" /></p>
 
 ## How it works 
 
@@ -23,13 +23,13 @@ Currently, the app can help an user remember the following.
 3. Generic text (Whatever typeed in the text box. For e.g., Hola - Hello)
 
 For e.g., You can type in something similar to this!
-<p align="center"><img src="images/desc2.png" width="200" height="300"/></p>
+<p align="center"><img src="images/desc2.png" width="400" height="600"/></p>
 
 As soon you enter the URL, the timer starts. When the timer reaches the first checkpoint, I send a notification in the app asking you to revisit the link. 
 
 Something like this.
 <p align="center">
-  <img src="images/desc3.png" width="200" height="300"/>
+  <img src="images/desc3.png" width="400" height="600"/>
 </p>
 
 And, Similarly for the subsequent checkpoints.
@@ -42,7 +42,7 @@ Note: The notifications will always be in black color to help user differentiate
 
 And then the same steps can be for other new information that the user wants to remember.
 
-For a much more detailed information on the math behind the spaced repitition pattern `1-3-8-21`, check out this [why 1-3-8-21?]()
+For a much more detailed information on the math behind the spaced repitition pattern `1-3-8-21`, check out this topic - [why 1-3-8-21?](https://github.com/beyescay/memento/blob/master/README.md#why-1-3-8-21-)
 
 ## Package Requirements
 

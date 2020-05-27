@@ -1,13 +1,15 @@
 # Memento - Let's Learn!
 <p align="center"><img src="images/desc.png" width="400" height="600" /></p>
 
-For a much shorter description of the project and also for instructions on how to build and run this project, check out this [README](CAPSTONE_README.md). But if you are looking for some fun read, then read on!
+
 
 ## So, who are you?
 
 Hi there, I am Memento! 
 
-I am a simple chatbot style app written in C++ that helps you to remember information forever. I make use of the `"Hermann-Ebbinghaus'"` forgetting curve, and the concept of `"Spaced-Repitition"` to help users to retain information in their memory forever.
+I am a simple chatbot style app written in C++ that helps you to remember information forever. I make use of the `Hermann Ebbinghaus` forgetting curve, and the concept of `"Spaced Repitition"` to help users to retain information in their memory forever.
+
+If you are looking for a much shorter description about me, and also for instructions on how to build and run me, check out this [CAPSTONE README](CAPSTONE_README.md). But if you are looking for some fun read, then read on!
 
 ## Sorry, I forgot your name! Can you tell me yours again?
 
@@ -60,12 +62,12 @@ For e.g., You can type in something similar to this!
 
 As soon you enter the URL, I start the timer. When the timer reaches the first checkpoint, I send a notification in the app asking you to revisit the link. 
 
-Something like this.
+Something like this!
 <p align="center">
   <img src="images/desc3.png" width="400" height="600"/>
 </p>
 
-And, Similarly for the subsequent checkpoints.
+And, similarly for the subsequent checkpoints.
 
 <p align="center">
   <img src="images/desc4.png" width="400" height="600"/>
@@ -96,7 +98,7 @@ t - time elapsed since learning
 s - stability
 ```
 
-As mentioned above, `Stability` increases after every reivision/repitition. The increase in stability is given by,
+As mentioned above, `Stability` increases after every revision/repitition. The increase in stability is given by,
 
 ```
 s_new = s * (s_inc * e^(-g * r))
@@ -115,7 +117,7 @@ Typically, the constant values are `s_inc = 26.31` and `g = 2.96`. If we plug th
 s_new = s * (26.31 * e^(-2.96 * r))
 ```
 
-Also, typically the initial stability value is `s = 0.87`. So we use this to obtain the the new stability and repeat the process.
+Also, typically the initial stability value is `s = 0.87`. So we use this to obtain the new stability and repeat the process.
 So, when we learn a new information the retention curve would look like,
 ```
 r = e^(-t/0.87)
