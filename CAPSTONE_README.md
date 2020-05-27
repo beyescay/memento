@@ -42,7 +42,7 @@ Note: The notifications will always be in black color to help user differentiate
 
 And then the same steps can be repeated for other new information that the user wants to remember.
 
-For a much more detailed information on the math behind the Spaced Repitition pattern `1-3-8-21`, check out this topic - [why 1-3-8-21?](https://github.com/beyescay/memento/blob/master/README.md#but-why-1-3-8-21-)
+For a much more detailed information on the math behind the Spaced Repitition pattern `1-3-8-21`, check out this topic - [But, why 1-3-8-21?](https://github.com/beyescay/memento/blob/master/README.md#but-why-1-3-8-21-)
 
 ## Package Requirements
 
