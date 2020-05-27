@@ -27,7 +27,7 @@ For e.g., You can type in something similar to this!
 
 As soon you enter the URL, the timer starts. When the timer reaches the first checkpoint, I send a notification in the app asking you to revisit the link. 
 
-Something like this.
+Just like this.
 <p align="center">
   <img src="images/desc3.png" width="400" height="600"/>
 </p>
@@ -38,7 +38,7 @@ And, Similarly for the subsequent checkpoints.
   <img src="images/desc4.png" width="400" height="600"/>
 </p>
 
-Note: The notifications will always be in black color to help user differentiate between chat response and notifications.
+Note: The notifications will always be in black color to help user differentiate between chat response and notifications. Also, in these snapshots the days are simulated as seconds. That's why you see notifications that are within seconds. In reality, this would actually be in days. But currently, it is still set to seconds so that reviewer could test this app. To change it to days, change the `seconds` to `days` in lines 24 and 25 of `src/forgetting_curve.cpp`
 
 And then the same steps can be for other new information that the user wants to remember.
 
