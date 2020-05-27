@@ -137,7 +137,9 @@ Day 8: Retention = 80%, New Stability = 55.49
 Day 21: Retention = 80%, New Stability = 136.74
 ```
 
-Okay, I have to tell a secret here before we get carried away by the magic of `Spaced Repitition` 
+Okay, so far this looks promising. Finally, it looks like we have found a way to hack our memory to retain information throughout our lifetime. But, that's not the end of the story!
+
+I have to tell a secret here before we get carried away by the magic of `Spaced Repitition` 
 
 Even after these 4 repititions, the memory is still going to decay. But we just slowed down the decay rate. To give you an idea of how much of an improvement we have made with this pattern of spaced reptition, here are some numbers.
 
