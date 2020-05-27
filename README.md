@@ -42,7 +42,9 @@ And btw, 1 Kg = 2.20462 pounds :)
 
 ## But, why Memento? Haven't you heard of Sticky notes?
 
-You got me! In a normal week, humans learn a lot of new information on various days of the week which they would like to remember forever. But, it would be a really herculean task to manually keep track of the revision schedule of all these different new information. And, this is where I can help. I can keep track of the revision schedule of every new information that you learn. And when it is time to revise/revisit, I will send you a notification in the app asking you to revise. This way you don't have to worry about manully keeping track of the revision schedule.
+You got me! 
+
+In a normal week, humans learn a lot of new information on various days of the week which they would like to remember forever. But, it would be a really herculean task to manually keep track of the revision schedule of all these different new information. And, this is where I can help. I can keep track of the revision schedule of every new information that you learn. And when it is time to revise/revisit, I will send you a notification in the app asking you to revise. This way you don't have to worry about manully keeping track of the revision schedule.
 
 Also, there are atleast dozen other sophisticated and cool apps like SuperMemo, Brainscape, Anki etc., that use much more complex machine learning algorithms along with Spaced Repititions to achieve the same goal. But, they all are very structured and very focused learning apps. Predominantly, they all use flash card style information to learn a new concept, for e.g., spanish vocab. But none of them can be used for information that can't be organized into flash cards. And, this was my writer's main motivation. I came out of his personal need to remember "non flash-card" style information. (Also, he is bad with names too. Shhhh!)
 
