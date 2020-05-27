@@ -155,7 +155,7 @@ After the fourth repitition, this is how long it would take to completely forget
 315 days ~ 10.5 months
 ```
 
-And without any repititions, guess how long it would take to completely forget the same information.
+And without any repititions, guess how long it would take to completely forget that same information.
 ```
 2 days
 ```
