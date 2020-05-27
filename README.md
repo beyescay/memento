@@ -36,7 +36,7 @@ Mainly, it is due to 4 reasons.
 
 Though the memory decays over time, with repeated repititions (revisions) of the same information, the decay rate can be changed. This implies that with optimally scheduled repititions (revisions), we can move an information to the long-term memory, and thus remembering the information forever (Yay!!). This concept of optimally scheduled repititions is called `Spaced Repitition`. 
 
-Though, there are numerous techniques to enforce an optimal "Spaced Repitition", I use a technique which I call - `1-3-8-21`. Say, you learn a new information on Day 0, then with repeated repitition of this same information on Days 1, 3, 8 and 21, this information can be remembered forever. And, this simple technique is the core idea behind me. (To understand why 1-3-8-21, check out the section `Why 1-3-8-21?` at the bottom of this page)
+Though, there are numerous techniques to enforce an optimal "Spaced Repitition", I use a technique that I call - `1-3-8-21`. Say, you learn a new information on Day 0, then with repeated repitition of this same information on Days 1, 3, 8 and 21, this information can be remembered forever. And, this simple technique is the core idea behind me. (To understand why 1-3-8-21, check out the section `Why 1-3-8-21?` at the bottom of this page)
 
 And btw, 1 Kg = 2.20462 pounds :)
 
