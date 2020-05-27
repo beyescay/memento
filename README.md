@@ -108,7 +108,7 @@ s_new = s * (s_inc * e^(-g * r))
 where,
 s_new - new stability after a repitition
 s     - current stability before repitition
-s_inc - constant that tells the maximum ratio of stability increase
+s_inc - constant that defines the maximum ratio of stability increase
 g     - gain constant that is defined by the interval (spaced repitition pattern)
 r     - retention
 ```
