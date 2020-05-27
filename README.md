@@ -137,7 +137,9 @@ Day 8: Retention = 80%, New Stability = 55.49
 Day 21: Retention = 80%, New Stability = 136.74
 ```
 
-Note: Even after these 4 repititions, the memory is still going to decay. But we just slowed down the decay rate. To give you an idea of how much of an improvement we have made with this pattern of spaced reptition, here are some numbers.
+Okay, I have to tell a secret here before we get carried away by the magic of `Spaced Repitition` 
+
+Even after these 4 repititions, the memory is still going to decay. But we just slowed down the decay rate. To give you an idea of how much of an improvement we have made with this pattern of spaced reptition, here are some numbers.
 
 After the fourth repitition, this is how long it would take to completely forget the information.
 
@@ -149,5 +151,5 @@ And without any repititions, guess how long it would take to completely forget t
 ```
 2 days
 ```
-Power of Spaced Repitition!
+And, that's the power of Spaced Repitition. Not bad right!
 
