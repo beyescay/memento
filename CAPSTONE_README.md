@@ -25,9 +25,9 @@ Currently, the app can help an user remember the following.
 For e.g., You can type in something similar to this!
 <p align="center"><img src="images/desc2.png" width="400" height="600"/></p>
 
-As soon you enter the URL, the timer starts. When the timer reaches the first checkpoint, I send a notification in the app asking you to revisit the link. 
+As soon you enter the URL, the timer starts. When the timer reaches the first checkpoint, it sends a notification in the app asking the user to revisit the link. 
 
-Just like this.
+Just like this!
 <p align="center">
   <img src="images/desc3.png" width="400" height="600"/>
 </p>
