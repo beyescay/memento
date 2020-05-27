@@ -87,7 +87,7 @@ I am glad you asked! Before we understand that, let's learn some new terms.
 
 * `Stability` - Stability refers to stability of a particular memory. If a memory is highly stable, then it would take long time for that memory to disapper and vice versa. Long-term memories have almost infinity stability. When you learn something new for the first time, it has a very low stability. But, when you revise that same information after a particular interval, the stability increases. This is the reason why with repititions you could improve the stability of a memory, and thus remembering it forever.
 
-Time for some math!
+Now, it's time for some math!
 
 As expained above, `Retention` of a new information follows an exponential curve that is given by,
 
