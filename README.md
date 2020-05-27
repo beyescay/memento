@@ -159,7 +159,7 @@ And without any repititions, guess how long it would take for the same informati
 ```
 2 days!!
 ```
-And, that's the power of Spaced Repitition. Not bad right!
+And, that's the power of `Spaced Repitition`. Not bad right!
 
 Now, it's time to learn. See you in the app! Happy Learning!
 
