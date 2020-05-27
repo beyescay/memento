@@ -95,7 +95,7 @@ Follow the prompts on the app to use Memento for tracking revision schedules.
 
 * `Loops, Functions, I/O`
     * The project demonstrates an understanding of C++ functions and control structures - `forgetting_curve.cpp : Line 16`
-    * The project accepts user input and processes the input - `gui.cpp : Line 32`
+    * The project accepts user input and processes the input - `gui.cpp : Line 30`
 
 * `Object Oriented Programming`
     * The project uses Object Oriented Programming techniques - `memento.h : Line 15`
