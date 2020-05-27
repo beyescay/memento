@@ -50,7 +50,7 @@ Also, there are atleast dozen other sophisticated and cool apps like SuperMemo, 
 
 Suppose say, you watched a video on youtube that explains how humans always have room for dessert. Next day, you went to a Thanksgiving dinner, and voila, you got a perfect opportunity to explain how you can still eat that Pumpkin Pie after that Turkey. But unfortunately, you forgot the explanation. You could have avoided this if you had remembered to watch that video again before you went to the dinner. But, I see the problem here! You forgot to remember to remember to rewatch to remember the video. (Oof, Inception much?) But, don't worry! That's where I come into the picture. And, that's why I am better than your Sticky notes. 
 
-## Okay, I am convinced! Now, How do you work?
+## Okay, I am convinced! Now, how do you work?
 
 So, when you enter a new information (that you want to remember) in the app, I start a timer. When the timer reaches the first checkpoint of 24 hrs (Day 1), I will send you a notification in the app asking you to revisit that information. Similary, I would send notifications for subsequent checkpoints - Day 3, Day 8 and Day 21. After the fourth checkpoint, the timer stops and congrats, now you will never forget anything in your next thanksgiving dinner. 
 
@@ -138,7 +138,7 @@ Day 21: Retention = 80%, New Stability = 136.74
 ```
 
 ## Wow, I never thought I could remember something forever with just few repititions!
-  
+
 Okay, so far this looks promising. Finally, it looks like we have found a way to hack our memory to retain information throughout our lifetime. Hurrah!
 
 But, that's not the end of the story!
