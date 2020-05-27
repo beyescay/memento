@@ -52,7 +52,7 @@ The project uses [wxWidgets](https://www.wxwidgets.org/) for the GUI.
 
 * To install wxWidgets on Linux - ```sudo apt-get -y install libwxgtk3.0-dev```
 
-* To install wxWidgets on Windows and other platforms - [Installing wxWidgets](https://wiki.wxwidgets.org/Install#Linux)
+* To install wxWidgets on Windows and other platforms - [Installing wxWidgets](https://wiki.wxwidgets.org/Install#Windows)
 
 ## Build and Run
 
