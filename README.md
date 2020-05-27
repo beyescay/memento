@@ -157,7 +157,7 @@ After the fourth repitition, this is how long it would take to completely forget
 
 And without any repititions, guess how long it would take to completely forget that same information.
 ```
-2 days
+2 days!!
 ```
 And, that's the power of Spaced Repitition. Not bad right!
 
