@@ -42,7 +42,7 @@ And btw, 1 Kg = 2.20462 pounds :)
 
 ## But, why Memento? Haven't you heard of Sticky notes?
 
-I think I am better than sticky notes for many reasons. For starters, I don't fall off from your fridge door directly into oblivion!
+I think I am better than sticky notes for many reasons. For starters, I don't fall off from your fridge door directly into oblivion ;)
 
 In a normal week, humans learn a lot of new information on various days of the week which they would like to remember forever. But, it would be a really herculean task to manually keep track of the revision schedule of all these different new information. And, this is where I can help. I can keep track of the revision schedule of every new information that you learn. And when it is time to revise/revisit, I will send you a notification in the app asking you to revise. This way you don't have to worry about manully keeping track of the revision schedule.
 
