@@ -30,7 +30,7 @@ Mainly, it is due to 4 reasons.
 
 * `Interference` - posits that the information humans are trying to remember gets jumbled up with other information in the memory, and thus losing the ability to recall. 
 
-* `Ineffective encoding` - suggests that careful attention was not paid to an information, that the information never even made to the short term memory in the first place. If you forgot the name of the forgetting curve in the first paragraph, it is probably due to this. The most common reason why people forget information is due to something called "Memory Fading" or "Decay theory".
+* `Ineffective encoding` - suggests that careful attention was not paid to an information, that the information never even made to the short term memory in the first place. If you forgot the name of that forgetting curve earlier, it is probably due to this. The most common reason why people forget information is due to something called "Memory Fading" or "Decay theory".
 
 * `Decay theory` - expounds that every new information that a person learns decays over time. And, this is applicable only for short-term memory (Information in the long-term memory never decays in normal circumstances). The curve that shows this decay of memory over time is called the "Forgetting curve", developed by Hermann Ebbinghaus in 1885. (Can you believe that ? In 1885!! So, since 1885 humans were trying to solve one of the most popular dilemmas that they face while shopping in a grocery store - "Ah, what's the fourth item in that shopping list note on my fridge ???")
 
