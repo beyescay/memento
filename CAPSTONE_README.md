@@ -32,7 +32,7 @@ Just like this!
   <img src="images/desc3.png" width="400" height="600"/>
 </p>
 
-And, Similarly for the subsequent checkpoints.
+And, similarly for the subsequent checkpoints.
 
 <p align="center">
   <img src="images/desc4.png" width="400" height="600"/>
