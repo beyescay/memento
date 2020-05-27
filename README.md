@@ -64,7 +64,7 @@ For e.g., You can type in something like this!
 
 As soon you enter the URL, I start the timer. When the timer reaches the first checkpoint, I send a notification in the app asking you to revisit the link. 
 
-Something like this!
+Just like this!
 <p align="center">
   <img src="images/desc3.png" width="400" height="600"/>
 </p>
