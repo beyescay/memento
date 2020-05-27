@@ -11,7 +11,7 @@ When we learn something new it gets stored in our memory. But the memory fades a
 
  In a normal week, we learn a lot of new information on various days of the week which we would want to remember forever. But, it would be a really difficult task to manually keep track of the revision schedule of all these different new information. It is almost impossible. And, this is where Memento helps. When a user learns something new, the user enters a short description about the new information in the app. Then the app keeps track of the revision schedule of that particular information. And, when it is time to revise, it sends a notification in the app asking the user to revise. This way the user does not have to worry about manually keeping track of the revision schedule.
 
- In short, Memento is just an automated revision schedule tracker. For a much more detailed description, please refer to this [README](README.md)
+ In short, Memento is just an automated revision schedule tracker. For a much more detailed and fun description of the app, please refer to this [README](README.md)
 
 ## How it works 
 
