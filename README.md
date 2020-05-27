@@ -59,7 +59,7 @@ Currently, I can help you remember the following.
 2. Web links (For e.g. a blog link on French Revolution).
 3. Generic text (Whatever you type in the text box. For e.g., Hola - Hello)
 
-For e.g., You can type in something similar to this!
+For e.g., You can type in something like this!
 <p align="center"><img src="images/desc2.png" width="400" height="600"/></p>
 
 As soon you enter the URL, I start the timer. When the timer reaches the first checkpoint, I send a notification in the app asking you to revisit the link. 
