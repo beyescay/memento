@@ -128,7 +128,7 @@ r = e^(-t/0.87)
 
 Now, the tricky part is to use these two equations to come with an optimal `Spaced Repitition` pattern. The goal is to increase the stability of a memory in few repititions, and as well as in the shortest amount of time possible. In the equation for stability, maximum stability increase is achieved when the retention is 0% i.e. when the memory almost disappears. But, when we repeat (revise) only when the retention goes to 0%, it is going to take a lot of months to achieve our goal, which is not practical. At the same time, if we repeat when the retention is 100%, we get the least amount of stability increase, and we have to do a lot of repititions to achieve our goal (You don't want to revise a topic every two hours right!). So, we have to arrive at a sweet spot. And guess what the sweet spot that my writer came up with - `1-3-8-21`
 
-So with this pattern, these are the values we get for stability and retention.
+So with this pattern, these are the values we get for retention before a repitition and the new stability after a repitition.
 
 ```
 Day 1: Retention = 31%, New Stability = 9.14
