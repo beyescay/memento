@@ -145,15 +145,15 @@ But, that's not the end of the story!
 
 I have to tell a little secret here before we get carried away by the magic of `Spaced Repitition` 
 
-Even after these 4 repititions, the memory is still going to decay. But we just slowed down the decay rate. To give you an idea of how much of an improvement we have made with this pattern of spaced reptition, here are some numbers.
+Even after these 4 repititions, sadly, the memory is still going to decay. It's not going to last forever. (Did I just burst your bubble?) All we did was, we just slowed down the decay rate of the memory. But with just four repititions, we ended up slowing down the decay rate significantly. To give you an idea of how much of an improvement we have made with this pattern of spaced repitition, here are some numbers.
 
-After the fourth repitition, this is how long it would take to completely forget the information.
+After the fourth repitition, this is how long it would take to completely forget an information.
 
 ```
 315 days ~ 10.5 months
 ```
 
-And without any repititions, guess how long it would take to completely forget the information.
+And without any repititions, guess how long it would take to completely forget the same information.
 ```
 2 days
 ```
