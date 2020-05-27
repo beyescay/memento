@@ -149,7 +149,7 @@ Even after these 4 repititions, sadly, the memory is still going to decay. It's 
 
 All we did was, we just slowed down the decay rate of the memory. But with just four repititions, we ended up slowing down the decay rate significantly. To give you an idea of how much of an improvement we have made with this pattern of spaced repitition, here are some numbers.
 
-After the fourth repitition, this is how long it would for an information to completely vanish from the memory.
+After the fourth repitition, this is how long it would take for an information to completely vanish from the memory.
 
 ```
 315 days ~ 10.5 months
