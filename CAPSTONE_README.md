@@ -81,7 +81,7 @@ Follow the prompts on the app to use Memento for tracking revision schedules.
 
 * `knowledge.h/knowledge.cpp` - Class that contains the various types of information that user wants to remember. Uses inheritance to define various type of information such as `FileKnowledge` class for information in text files, `LinkKnowledge` to store URLs, `TextKnowledge` to store text entered directly in the GUI. Currently, there are no invariants defined on the type of information in these different classes. But it can be added in the future, and that was the reason behind defining this class. Each `Knowledge` class object contains its own `Forgetting Curve` class to keep track of the retention.
 
-* `memento.h/memento.cpp` - Core class of Memento App that mediates the interactions between the GUI and the tracker. Creates the appropriate `Knowledge` class based on the user text and starts it's `Forgetting Curve` timer on a separate thread and listens for notifications from the new thread.
+* `memento.h/memento.cpp` - Core class of Memento App that mediates the interactions between the GUI and the tracker. Creates the appropriate `Knowledge` class based on the user text, and starts its `Forgetting Curve` timer on a separate thread and listens for notifications from the new thread.
 
 * `message_queue.h` - Template class that defines a message queue to send messages between different threads.
 
