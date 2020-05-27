@@ -36,7 +36,7 @@ Mainly, it is due to 4 reasons.
 
 Though the memory decays over time, with repeated repititions (revisions) of the same information, the decay rate can be changed. This implies that with optimally scheduled repititions (revisions), we can move an information to the long-term memory, and thus remembering the information forever (Yay!!). This concept of optimally scheduled repititions is called `Spaced Repitition`. 
 
-Though, there are numerous techniques to enforce an optimal "Spaced Repitition", I use a technique that I call - `1-3-8-21`. Say, you learn a new information on Day 0, then with repeated repitition of this same information on Days 1, 3, 8 and 21, this information can be remembered forever. And, this simple technique is the core idea behind me. (To understand why `1-3-8-21`, check out the section `Why 1-3-8-21?` at the bottom of this page)
+Though, there are numerous techniques to enforce an optimal "Spaced Repitition", I use a technique that I call - `1-3-8-21`. Say, you learn a new information on Day 0, then with repeated repitition of this same information on Days 1, 3, 8 and 21, this information can be remembered forever. And, this simple technique is the core idea behind me. (To understand why `1-3-8-21`, check out the section `But, Why 1-3-8-21?` at the bottom of this page)
 
 And btw, 1 Kg = 2.20462 pounds :)
 
@@ -79,7 +79,7 @@ My notifications will always be in black color to help you differentiate between
 
 And then you can repeat the same steps for other new information that you learn. Happy Learning!
 
-## Why 1-3-8-21 ?
+## But, Why 1-3-8-21 ?
 
 I am glad you asked! Before we understand that, let's learn some new terms.
 
@@ -137,6 +137,8 @@ Day 8: Retention = 80%, New Stability = 55.49
 Day 21: Retention = 80%, New Stability = 136.74
 ```
 
+## Wow, I never thought I could remember something forever with just few repititions!
+  
 Okay, so far this looks promising. Finally, it looks like we have found a way to hack our memory to retain information throughout our lifetime. Hurrah!
 
 But, that's not the end of the story!
