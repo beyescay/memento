@@ -9,7 +9,7 @@ Memento is a simple chatbot style app that helps users to remember information f
 
 When we learn something new it gets stored in our memory. But the memory fades away over time. With repeated repititions (revisions) at particular optimal intervals, we can persist this memory forever. For e.g., if we learn the meaning of a new word on Day 0, then with repeated revisions of the meaning of the same word on Day 1, 3, 8 and 21, we can remember that word forever. And this concept of repeated revisions at optimal intervals is called `Spaced Repitition`.
 
- In a normal week, we learn a lot of new information on various days of the week which we would like to remember forever. But, it would be a really difficult task to manually keep track of the revision schedule of all these different new information. It is almost impossible. And, this is where Memento helps. When a user learns something new, the user enters a short description about the new information in the app. Then the app keeps track of the revision schedule of that particular information. And, when it is time to revise, it sends a notification in the app asking the user to revise. This way the user does not have to worry about manually keeping track of the revision schedule.
+ In a normal week, we learn a lot of new information on various days of the week which we would like to remember forever. But, it would be a really difficult task to manually keep track of the revision schedule of all these different new information. It is almost impossible. And, this is where Memento helps. When an user learns something new, the user enters a short description about the new information in the app. Then the app keeps track of the revision schedule of that particular information. And, when it is time to revise, it sends a notification in the app asking the user to revise. This way the user does not have to worry about manually keeping track of the revision schedule.
 
  In short, Memento is just an automated revision schedule tracker. For a much more detailed and fun description of the app, please refer to this [README](README.md)
 
@@ -22,7 +22,7 @@ Currently, the app can help an user remember the following.
 2. Web links (For e.g. a blog link on French Revolution).
 3. Generic text (Whatever typeed in the text box. For e.g., Hola - Hello)
 
-For e.g., You can type in something similar to this!
+For e.g., you can type in something similar to this!
 <p align="center"><img src="images/desc2.png" width="400" height="600"/></p>
 
 As soon you enter the URL, the timer starts. When the timer reaches the first checkpoint, it sends a notification in the app asking the user to revisit the link. 
