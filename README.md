@@ -120,6 +120,7 @@ s_new = s * (26.31 * e^(-2.96 * r))
 ```
 
 Also, typically the initial stability value is `s = 0.87`. So we use this to obtain the new stability and repeat the process.
+
 So, when we learn a new information the retention curve would look like,
 ```
 r = e^(-t/0.87)
