@@ -95,9 +95,9 @@ As expained above, `Retention` of a new information follows an exponential curve
 r = e^(-t/s)
 
 where,
-r - retention
-t - time elapsed since learning
-s - stability
+r - retention of a new information
+t - time elapsed since learning that new information
+s - stability of that new information
 ```
 
 As mentioned above, `Stability` increases after every revision/repitition. The increase in stability is given by,
