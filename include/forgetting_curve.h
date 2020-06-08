@@ -7,7 +7,9 @@
 #include <vector>
 
 #include "message_queue.h"
+#include "knowledge.h"
 
+class BaseKnowledge;
 
 class ForgettingCurve {
 
@@ -20,15 +22,25 @@ class ForgettingCurve {
   void notify();
   void waitForNotification();
 
-  // Getters
+  // Getters & Setters
   int getCurrentRep() {return _rep_num;}
+  void setCurrentRep(int rep) {_rep_num = rep;}
+
   static int getMaxReps() {return _k_max_reps;}
 
   float getRetention() {return _retention;}
+  void setRetention(float retention) {_retention = retention;}
+  
+  float getStability() {return _stability;}
+  void setStability(float stability) {_stability = stability;}
+
   float getMinRetention(int rep_num);
 
   int getTotalElapsedTime() {return _total_time_elapsed;}
 
+  // Setters
+  void setKnowledgePtr(std::shared_ptr<BaseKnowledge> know_ptr) { _knowledge = know_ptr; }
+  
   // Update functions
   void updateRetention();
   void updateStability();
@@ -40,6 +52,7 @@ class ForgettingCurve {
   MessageQueue<int> _message_q;
   std::mutex _mtx;
   std::vector<std::thread> _threads;
+  std::shared_ptr<BaseKnowledge> _knowledge;
 
   /// Forgetting curve parameters
 

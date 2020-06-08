@@ -22,6 +22,9 @@ class Memento {
   // Getter
   void getResponse(std::string user_txt);
 
+  // Function to restart all threads in case of crash
+  void restart();
+  
   // Destructor
   ~Memento();
 
@@ -34,6 +37,7 @@ class Memento {
   std::vector<std::thread> _threads;
   std::string _last_response;
   static std::unordered_map<std::string, std::string> _responses;
+  static const std::string _data_dir_path;
 
 };
 

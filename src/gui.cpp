@@ -98,6 +98,7 @@ MementoDialogWindow::MementoDialogWindow(wxWindow* parent, wxWindowID id) : wxSc
 
   _memento = std::make_unique<Memento>(this);
   _memento->getResponse("start");
+  _memento->restart();
   
 }
 

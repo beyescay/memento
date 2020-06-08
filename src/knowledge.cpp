@@ -3,14 +3,73 @@
 #include <sstream>
 #include <chrono>
 #include <ctime>
+#include <fstream>
+#include <iostream>
 
-BaseKnowledge::BaseKnowledge(std::string info) : _info(info) {
+#include <boost/filesystem.hpp>
+
+const std::string BaseKnowledge::_data_dir_path = "../data/";
+namespace bfs = boost::filesystem;
+
+BaseKnowledge::BaseKnowledge(std::string info, std::string file_id) : _info(info), _file_id(file_id) {
 
   _fcPtr = std::make_shared<ForgettingCurve>();
-  
+
 }
 
-FileKnowledge::FileKnowledge(std::string info) : BaseKnowledge(info) { }
+void BaseKnowledge::writeData() {
+  
+  std::string file_path = _data_dir_path + _file_id;
+
+  std::ofstream ofs(file_path, std::ofstream::trunc);
+
+  ofs << "Info: " << _info << "\n";
+  ofs << "Hours_since_start: " << _init_time_hours << "\n";
+  ofs << "Hours_since_last_interval: " << _start_time_hours << "\n";;
+  ofs << "Rep_num: " << _fcPtr->getCurrentRep() << "\n";
+  ofs << "Retention: " << _fcPtr->getRetention() << "\n";
+  ofs << "Stability: " << _fcPtr->getStability() << "\n";
+
+  ofs.close();
+
+}
+
+void BaseKnowledge::loadData() {
+  
+  std::string file_path = _data_dir_path + _file_id;
+  
+  std::ifstream ifs(file_path);
+  std::string key;
+  
+  ifs >> key >> _info;
+  ifs >> key >> _init_time_hours;
+  ifs >> key >> _start_time_hours;
+
+  int rep_num;
+  float retention;
+  float stability;
+
+  ifs >> key >> rep_num;
+  ifs >> key >> retention;
+  ifs >> key >> stability;
+
+  _fcPtr->setCurrentRep(rep_num);
+  _fcPtr->setRetention(retention);
+  _fcPtr->setStability(stability);
+
+  ifs.close();
+
+}
+
+void BaseKnowledge::deleteData() {
+  
+  std::string file_path = _data_dir_path + _file_id;
+  
+  std::remove(file_path.c_str());
+
+}
+
+FileKnowledge::FileKnowledge(std::string info, std::string file_id) : BaseKnowledge(info, file_id) { }
 
 struct CurveInfoFormatter {
   
@@ -55,7 +114,7 @@ std::string FileKnowledge::getNotification() {
 
 }
 
-LinkKnowledge::LinkKnowledge(std::string info) : BaseKnowledge(info) { }
+LinkKnowledge::LinkKnowledge(std::string info, std::string file_id) : BaseKnowledge(info, file_id) { }
 
 std::string LinkKnowledge::getNotification() {
 
@@ -71,7 +130,7 @@ std::string LinkKnowledge::getNotification() {
 
 }
 
-TextKnowledge::TextKnowledge(std::string info) : BaseKnowledge(info) { }
+TextKnowledge::TextKnowledge(std::string info, std::string file_id) : BaseKnowledge(info, file_id) { }
 
 std::string TextKnowledge::getNotification() {
 
