@@ -166,11 +166,9 @@ Now, it's time to learn. See you in the app! Happy Learning!
 ## Release Log
 
 ### Version 1 - 05-29-2020
-```
 Initial Release
-```
+
 
 ### Version 2 - 06-08-2020
-```
 Added crash recovery mechanism. Since each thread lives upto 21 days, there is a high chance of losing data in the event of a crash. To save the data loss, this release version constanly writes the thread data into local files every hour. In the event of a crash, it would restart all the threads from the last checkpoint. This prevents the data loss.
-```
+
