@@ -75,7 +75,7 @@ And, similarly for the subsequent checkpoints.
   <img src="images/desc4.png" width="400" height="600"/>
 </p>
 
-My notifications will always be in black color to help you differentiate between my chat response and notifications. Also, in these snapshots the days are simulated as seconds. That's why you see notifications that are within seconds. In reality, this would actually be in days. To change it to days, change the `seconds` to `days` in lines 24 and 25 of `src/forgetting_curve.cpp`
+My notifications will always be in black color to help you differentiate between my chat response and notifications. Also, in these snapshots the days are simulated as seconds. That's why you see notifications that are within seconds. In reality, this would actually be in days. To change it to days, change the `seconds` to `hours` in lines 24 and 25 of `src/forgetting_curve.cpp`
 
 And then you can repeat the same steps for other new information that you learn. Happy Learning!
 
