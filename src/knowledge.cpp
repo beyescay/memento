@@ -18,14 +18,15 @@ BaseKnowledge::BaseKnowledge(std::string info, std::string file_id) : _info(info
 }
 
 void BaseKnowledge::writeData() {
-  
+
   std::string file_path = _data_dir_path + _file_id;
 
   std::ofstream ofs(file_path, std::ofstream::trunc);
+  //ofs.precision(4);
 
   ofs << "Info: " << _info << "\n";
-  ofs << "Hours_since_start: " << _init_time_hours << "\n";
-  ofs << "Hours_since_last_interval: " << _start_time_hours << "\n";;
+  ofs << "Hours_since_start: " << _total_time_hours << "\n";
+  ofs << "Hours_since_last_interval: " << _interval_time_hours << "\n";;
   ofs << "Rep_num: " << _fcPtr->getCurrentRep() << "\n";
   ofs << "Retention: " << _fcPtr->getRetention() << "\n";
   ofs << "Stability: " << _fcPtr->getStability() << "\n";
@@ -35,44 +36,57 @@ void BaseKnowledge::writeData() {
 }
 
 void BaseKnowledge::loadData() {
-  
+
   std::string file_path = _data_dir_path + _file_id;
-  
+
   std::ifstream ifs(file_path);
   std::string key;
-  
-  ifs >> key >> _info;
-  ifs >> key >> _init_time_hours;
-  ifs >> key >> _start_time_hours;
+  std::string value;
+  std::string line;
 
-  int rep_num;
-  float retention;
-  float stability;
+  while(std::getline(ifs, line)) {
+    auto pos = line.find(":");
+    key = line.substr(0, pos);
+    value = line.substr(pos+2,line.size());
 
-  ifs >> key >> rep_num;
-  ifs >> key >> retention;
-  ifs >> key >> stability;
-
-  _fcPtr->setCurrentRep(rep_num);
-  _fcPtr->setRetention(retention);
-  _fcPtr->setStability(stability);
+    if (key == "Info") {
+      _info = value;
+    }
+    else if (key == "Hours_since_start") {
+      _total_time_hours = std::stoi(value);
+    }
+    else if (key == "Hours_since_last_interval") {
+      _interval_time_hours = std::stoi(value);
+    }
+    else if (key == "Rep_num") {
+      _fcPtr->setCurrentRep(std::stoi(value));
+    }
+    else if (key == "Retention") {
+      _fcPtr->setRetention(std::strtof(value.c_str(), NULL));
+    }
+    else if (key == "Stability") {
+      _fcPtr->setStability(std::stof(value));
+    }
+  }
 
   ifs.close();
 
 }
 
 void BaseKnowledge::deleteData() {
-  
+
   std::string file_path = _data_dir_path + _file_id;
-  
-  std::remove(file_path.c_str());
+
+  if (_fcPtr->getCurrentRep() >= _fcPtr->getMaxReps()) {
+    std::remove(file_path.c_str());
+  }
 
 }
 
 FileKnowledge::FileKnowledge(std::string info, std::string file_id) : BaseKnowledge(info, file_id) { }
 
 struct CurveInfoFormatter {
-  
+
   std::string info;
   std::string ret;
   std::string rep_num;
@@ -103,7 +117,7 @@ struct CurveInfoFormatter {
 std::string FileKnowledge::getNotification() {
 
   auto curve = CurveInfoFormatter(_fcPtr.get()).format();
-  
+
   std::string res = curve->curr_time + "\n" +
                     "Time to revise these notes: " + _info + "\n" +
                     "Num days since initial learning: " + curve->elapsed_days + "\n" +
@@ -119,7 +133,7 @@ LinkKnowledge::LinkKnowledge(std::string info, std::string file_id) : BaseKnowle
 std::string LinkKnowledge::getNotification() {
 
   auto curve = CurveInfoFormatter(_fcPtr.get()).format();
-  
+
   std::string res = curve->curr_time + "\n" +
                     "Time to revisit this link: " + _info + "\n" +
                     "Num days since initial learning: " + curve->elapsed_days + "\n" +
@@ -135,13 +149,13 @@ TextKnowledge::TextKnowledge(std::string info, std::string file_id) : BaseKnowle
 std::string TextKnowledge::getNotification() {
 
   auto curve = CurveInfoFormatter(_fcPtr.get()).format();
-  
+
   std::string res = curve->curr_time + "\n" +
                     "Time to revise this text: " + _info + "\n" +
                     "Num days since initial learning: " + curve->elapsed_days + "\n" +
                     "Currently, you remember: " + curve->ret + "% of this text. Revise it now to take it to 100%\n" +
                     "This will be your revision number: " + curve->rep_num;
-                    
+
   return res;
 
 }

@@ -12,23 +12,23 @@
 class ForgettingCurve;
 
 class BaseKnowledge {
-  
+
   public:
   BaseKnowledge(std::string info, std::string file_id);
-  
+
   ForgettingCurve* getForgettingCurvePtr(){ return _fcPtr.get(); }
 
   void setSubject(std::string subject) {_subject = subject;}
   std::string getSubject() const {return _subject;}
 
-  void setStartTimeHours(int hours) {_start_time_hours = hours;}
-  int getStartTimeHours() const {return _start_time_hours;}
-  
-  void setInitTimeHours(int hours) {_init_time_hours = hours;}
-  int getInitTimeHours() const {return _init_time_hours;}
+  void setTotalTimeHours(int hours) {_total_time_hours = hours;}
+  int getTotalTimeHours() const {return _total_time_hours;}
+
+  void setIntervalTimeHours(int hours) {_interval_time_hours = hours;}
+  int getIntervalTimeHours() const {return _interval_time_hours;}
 
   virtual std::string getNotification() = 0;
-  
+
   void writeData();
   void loadData();
   void deleteData();
@@ -37,9 +37,9 @@ class BaseKnowledge {
   std::shared_ptr<ForgettingCurve> _fcPtr;
   std::string _info;
   std::string _subject;
-  int _start_time_hours {0};
-  int _init_time_hours {0};
-  
+  int _total_time_hours {0};
+  int _interval_time_hours {0};
+
   static const std::string _data_dir_path;
   std::string _file_id;
 

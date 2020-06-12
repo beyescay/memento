@@ -17,34 +17,33 @@ void ForgettingCurve::notify(){
 
   constexpr int hours_in_day = 24;
 
-  auto start_time = system_clock::now() - hours(_knowledge->getStartTimeHours());
-  auto init_time = start_time - hours(_knowledge->getInitTimeHours());
+  auto start_time = system_clock::now() - hours(_knowledge->getTotalTimeHours()*hours_in_day);
+  auto interval_time = system_clock::now() - hours(_knowledge->getIntervalTimeHours()*hours_in_day);
   auto last_write_time = system_clock::now();
 
   while(_rep_num < _k_max_reps){
 
     auto curr_time = system_clock::now();
-    _interval_time_elapsed = duration_cast<hours>(curr_time-start_time).count()/hours_in_day;
-    _total_time_elapsed = duration_cast<hours>(curr_time-init_time).count()/hours_in_day;
+    _interval_time_elapsed = duration_cast<hours>(curr_time-interval_time).count()/hours_in_day;
+    _total_time_elapsed = duration_cast<hours>(curr_time-start_time).count()/hours_in_day;
     auto write_time_elapsed = duration_cast<hours>(curr_time-last_write_time).count();
-
     updateRetention();
-
-    if (write_time_elapsed > 1) {
-      _knowledge->setInitTimeHours(_total_time_elapsed);
-      _knowledge->setStartTimeHours(_interval_time_elapsed);
-      _knowledge->writeData();
-      last_write_time = system_clock::now();
-    }
 
     if (_retention < getMinRetention(_rep_num)){
       _rep_num++;
       _message_q.send(_rep_num);
       updateStability();
-      start_time = curr_time;
+      interval_time = curr_time;
     }
-
-    std::this_thread::sleep_for(hours(1));
+    
+    if (write_time_elapsed >= 2) {
+      _knowledge->setIntervalTimeHours(_interval_time_elapsed);
+      _knowledge->setTotalTimeHours(_total_time_elapsed);
+      _knowledge->writeData();
+      last_write_time = system_clock::now();
+    }
+    
+    std::this_thread::sleep_for(hours(2));
 
   }
 

@@ -21,27 +21,32 @@ bool MementoApp::OnInit(){
 
 // Memento Frame - START
 MementoFrame::MementoFrame(const wxString& title) : wxFrame(NULL, wxID_ANY, title, wxDefaultPosition, wxSize(width, height)) {
-  
+
   auto memento_bg_img = new MementoBgImagePanel(this);
 
   _dialog_window = new MementoDialogWindow(memento_bg_img, wxID_ANY);
 
   int txt_ctrl_id = 1;
+  
   _user_txt_ctrl = new wxTextCtrl(memento_bg_img, txt_ctrl_id, "", wxDefaultPosition, wxSize(width, 5), wxTE_PROCESS_ENTER | wxTE_CHARWRAP | wxTE_AUTO_URL, wxDefaultValidator, wxTextCtrlNameStr);
+  
   Connect(txt_ctrl_id, wxEVT_TEXT_ENTER, wxCommandEventHandler(MementoFrame::OnEnter));
 
   wxBoxSizer* vert_box_sizer = new wxBoxSizer(wxVERTICAL);
   vert_box_sizer->AddSpacer(0);
+  std::unique_lock<std::mutex> u_lock(_mtx);
   vert_box_sizer->Add(_dialog_window, 15, wxEXPAND | wxALL, 0);
   vert_box_sizer->Add(_user_txt_ctrl, 1, wxEXPAND | wxALL, 5);
   memento_bg_img->SetSizer(vert_box_sizer);
-  this->Center();  
+  this->Center();
 }
 
 void MementoFrame::OnEnter(wxCommandEvent &WXUNUSED(event)) {
 
-  wxString user_txt = _user_txt_ctrl->GetLineText(0);
+  std::unique_lock<std::mutex> u_lock(_mtx);
 
+  wxString user_txt = _user_txt_ctrl->GetLineText(0);
+  
   _dialog_window->AddDialogItem(user_txt, true);
 
   _user_txt_ctrl->Clear();
@@ -67,7 +72,7 @@ void MementoBgImagePanel::paintEvent(wxPaintEvent& evt) {
 
 }
 
-void MementoBgImagePanel::paintNow() { 
+void MementoBgImagePanel::paintNow() {
 
   wxClientDC dc(this);
   render(dc);
@@ -90,19 +95,23 @@ EVT_PAINT(MementoDialogWindow::paintEvent)
 END_EVENT_TABLE()
 
 MementoDialogWindow::MementoDialogWindow(wxWindow* parent, wxWindowID id) : wxScrolledWindow(parent, id) {
-  
+
   _dialog_window_sizer = new wxBoxSizer(wxVERTICAL);
   _dialog_window_sizer->AddSpacer(500);
   this->SetSizer(_dialog_window_sizer);
   wxInitAllImageHandlers();
 
   _memento = std::make_unique<Memento>(this);
-  _memento->getResponse("start");
-  _memento->restart();
   
+  _memento->getResponse("start");
+  
+  _memento->restart();
+
 }
 
 void MementoDialogWindow::AddDialogItem(wxString text, bool from_user, bool is_notification) {
+  
+  std::unique_lock<std::mutex> u_lock(_mtx);
   
   MementoDialogItem* item = new MementoDialogItem(this, text, from_user, is_notification);
   _dialog_window_sizer->Add(item, 0, wxALL | (from_user == true ? wxALIGN_RIGHT : wxALIGN_LEFT), 8);
@@ -127,14 +136,15 @@ void MementoDialogWindow::PrintMementoResponse(std::string response, bool is_not
 }
 
 Memento* MementoDialogWindow::GetMementoHandle(){
-
+  
+  std::unique_lock<std::mutex> u_lock(_mtx);
   return _memento.get();
 
 }
 
 
 void MementoDialogWindow::paintEvent(wxPaintEvent& evt){
-  
+
   wxPaintDC dc(this);
   render(dc);
 
@@ -169,12 +179,12 @@ MementoDialogItem::MementoDialogItem(wxPanel* parent, wxString text, bool from_u
    //wxSize sz = this->GetSize();
    //wxImage img_rescaled = img.Rescale(sz.GetWidth(), sz.GetHeight(), wxIMAGE_QUALITY_NEAREST);
    //auto sbm = new wxStaticBitmap(this, wxID_ANY, wxBitmap(img_rescaled, wxBITMAP_TYPE_PNG), wxPoint(100, 30), wxSize(100, 100));
-   
+
    auto txt = new wxStaticText(this, wxID_ANY, text, wxPoint(-1, -1), wxSize(box_width, -1), wxALIGN_LEFT | wxBORDER_NONE);
    txt->SetForegroundColour(is_notification == true ? wxColor(*wxWHITE) : wxColor(*wxBLACK));
-   
+
    wxBoxSizer* hor_box_sizer = new wxBoxSizer(wxHORIZONTAL);
-   
+
    if (from_user) {
     hor_box_sizer->Add(txt, 8, wxEXPAND | wxALL, 2);
     //hor_box_sizer->Add(sbm, 1, wxEXPAND | wxALL, 1);
@@ -190,11 +200,9 @@ MementoDialogItem::MementoDialogItem(wxPanel* parent, wxString text, bool from_u
 
    if (is_notification) {
       this->SetBackgroundColour(wxColor(0, 0, 0));
-   } 
-   else{ 
+   }
+   else{
       this->SetBackgroundColour((from_user == true ? wxColor(255, 1, 217) : wxT("YELLOW")));
    }
   }
  // Memento Dialog Item - START
-
-
